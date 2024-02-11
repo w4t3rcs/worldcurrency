@@ -1,0 +1,23 @@
+<div class="converter-item bg-dark rounded d-flex flex-column flex-md-row p-3 gap-5 py-md-5 align-items-center justify-content-between">
+  <div class="bg-info d-block rounded position-static d-grid gap-1 p-2 mx-0 border-0 shadow w-220px">
+    <h2 class="text-light">From: <strong>{{currencyFrom.fullName}}</strong></h2>
+    <h5 class="text-dark">{{currencyFrom.id}}</h5>
+    <select class="form-control" [(ngModel)]="currencyFrom">
+      <option [ngValue]="currency" *ngFor="let currency of currencies">{{currency.fullName}}</option>
+    </select>
+  </div>
+  <div class="bg-info d-block rounded position-static d-grid gap-1 p-2 mx-0 border-0 shadow w-220px">
+    <h2 class="text-light">To: <strong>{{currencyTo.fullName}}</strong></h2>
+    <h5 class="text-dark">{{currencyTo.id}}</h5>
+    <select class="form-control" [(ngModel)]="currencyTo">
+      <option [ngValue]="currency" *ngFor="let currency of currencies">{{currency.fullName}}</option>
+    </select>
+  </div>
+</div>
+<div class="divider"></div>
+<div class="converter-item bg-dark rounded d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-md-around">
+  <div class="bg-success d-block rounded position-static d-grid gap-1 p-2 mx-0 border-0 shadow w-220px">
+    <h1 class="text-light"><strong>{{convertCurrency()}} {{currencyTo.id}}</strong></h1>
+  </div>
+</div>
+<div class="divider"></div>

@@ -1,0 +1,18 @@
+<table class="table table-striped table-bordered table-dark table-hover">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Code</th>
+      <th scope="col">Full Name</th>
+      <th scope="col">From 1 Dollar</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider" *ngFor="let currency of currencies; let i = index">
+    <tr>
+      <th scope="row">{{i + 1}}</th>
+      <td>{{currency.id}}</td>
+      <td>{{currency.fullName}}</td>
+      <td>{{currency.value}}</td>
+    </tr>
+  </tbody>
+</table>
